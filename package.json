@@ -1,0 +1,12 @@
+{
+  "name": "copy-prefab-name",
+  "version": "0.0.1",
+  "description": "输出预制体节点名",
+  "author": "slf",
+  "main": "main.js",
+  "main-menu": {
+    "扩展/输出预制体节点名": {
+      "message": "copy-prefab-name:start"
+    }
+  }
+}
