@@ -15,8 +15,9 @@ extend 扩展参考（如果挂在多个自定义脚本 也会精准获取 组�
     参考main.js 的copyProperty.start函数   
     if (proName.indexOf("extend")!=-1){	
 
-依赖把以下脚本放到 预制体类里
-将该文件夹放入到 ~/.CocosCreator/packages（Windows 用户为 C:\Users\${你的用户名}\.CocosCreator\packages），或者放入到 ${你的项目路径}/packages 文件夹下即可完成扩展包的安装。
+
+
+=========================================================
 
  	/**属性字典 */
     private proDic:Map<string,cc.Component>;
