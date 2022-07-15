@@ -48,7 +48,7 @@ let copyProperty = (function(){
 	//解析node组件
 	function parseNode(name,json){
 		let type = 'cc.Node';
-		let content = `private get ${name}() : ${type} {return this.findNode("${findPath(json)}");}`;
+		let content = `private get ${name}() : ${type} {return ComponentFindUtils.findNode("${findPath(json)}",this);}`;
 		Editor.info(content);
 	}
 	
@@ -56,7 +56,7 @@ let copyProperty = (function(){
 	function parseBuiltinComponent(name,type,json){
 		type = findType(type,json);
 		if (type != ''){
-			let content = `private get ${name}() : ${type} {return this.find<${type}>("${findPath(json)}",${type});}`
+			let content = `private get ${name}() : ${type} {return ComponentFindUtils.find<${type}>("${findPath(json)}",${type},this);}`
 			Editor.info(content);
 		}
 	}
@@ -65,7 +65,7 @@ let copyProperty = (function(){
 	function parseCustomComponent(name,json,type=''){
 		type=findCustomType(json,type);
 		if (type != ''){
-			let content = `private get ${name}() : ${type} {return this.find<${type}>("${findPath(json)}",${type});}`
+			let content = `private get ${name}() : ${type} {return ComponentFindUtils.find<${type}>("${findPath(json)}",${type},this);}`
 			Editor.info(content);
 		}
 	}
