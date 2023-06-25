@@ -1,0 +1,23 @@
+{
+    "name": "copy-prefab-name",
+    "package_version": 2,
+    "version": "1.0.0",
+    "description": "复制预制体节点名",
+    "author": "slf",
+    "main": "main.js",
+	"contributions": {
+        "menu": [{
+            "path": "Extension",
+            "label": "copy-prefab-name",
+            "message": "copy-prefab-name:start"
+        }],
+		 "messages": {
+            "copy-prefab-name:start": {
+                "methods": ["start"]
+            },
+			"scene:ready": {
+                "methods": ["openPrefab"]
+            }
+		 }
+    }
+}
